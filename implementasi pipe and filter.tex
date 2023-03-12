@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage{tikzexternal}
+
+\begin{document}
+\begin{tikzpicture}[node distance=2cm, auto]
+	\node [input, name=input] {};
+	\node [block, right of=input] (filter) {Filter};
+	\node [block, right of=filter, node distance=3cm] (output) {Output};
+	\draw [->] (input) -- (filter);
+	\draw [->] (filter) -- (output);
+\end{tikzpicture}
+\end{document}
